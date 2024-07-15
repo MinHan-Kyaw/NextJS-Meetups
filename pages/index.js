@@ -16,7 +16,7 @@ const DUMMY_MEETUPS = [
       "https://upload.wikimedia.org/wikipedia/commons/1/1d/Brno_-_Veve%C5%99%C3%AD_-_Stavebn%C3%AD_fakulta_VUT.jpg",
     address: "Some address 15, 12345 Some City",
     description: "This is a first meetup!",
-  }
+  },
 ];
 
 function HomePage() {
