@@ -11,11 +11,29 @@ function MeetupDetails() {
   );
 }
 
-export function getStaticProps(context) {
+export async function getStaticPaths() {
+  return {
+    fallback: false,
+    paths: [
+      {
+        params: {
+          meetupId: "m1",
+        },
+      },
+      {
+        params: {
+          meetupId: "m2",
+        },
+      },
+    ]
+  };
+}
+
+export async function getStaticProps(context) {
   const meetupId = context.params.meetupId;
 
   return {
-    prop: {
+    props: {
       meetupData: {
         image:
           "https://upload.wikimedia.org/wikipedia/commons/1/1d/Brno_-_Veve%C5%99%C3%AD_-_Stavebn%C3%AD_fakulta_VUT.jpg",
